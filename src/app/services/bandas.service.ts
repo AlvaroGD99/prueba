@@ -11,6 +11,9 @@ export interface Banda {
   integrantes:string;
   activos:string;
   discoMasVendido:string;
+  cancion1:string;
+  cancion2:string;
+  cancion3:string;
 }
 
 @Injectable({

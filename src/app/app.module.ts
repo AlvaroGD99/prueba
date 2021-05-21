@@ -8,6 +8,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { DetalleComponent } from './components/detalle/detalle.component';
 import { NuevaBandaComponent } from './components/nueva-banda/nueva-banda.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SafePipe } from './pipes/safe.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MainPageComponent,
     HeaderComponent,
     DetalleComponent,
-    NuevaBandaComponent
+    NuevaBandaComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,

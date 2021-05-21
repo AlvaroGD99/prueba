@@ -3,8 +3,9 @@ figure{
     position: absolute;
     z-index: -1;
 }
-span{
+h2{
     color: black;
+    width: 100%;
 }
 .cover-image{
     width: 100%;
@@ -26,12 +27,12 @@ span{
 
 button{
     width: 100px;
-    
     background-color: rgba(133, 130, 130, 0.767);
     border: none;
     padding: 5px;
     font-size: 1em;
     cursor: pointer;
+    border-radius: 2px;
 }
 .bandaActual {
     
@@ -56,7 +57,7 @@ button{
     
 }
 p{
-   padding: 10px;
+   padding: 5px;
 }
 .texto{
     width: 80%;
@@ -74,6 +75,22 @@ p{
     display: flex;
     margin: 2% 10%;
     justify-content: space-between;
+}
+
+h1{
+    font-size: 2em;
+    margin-bottom: 2%;
+    color: black;
+    font-weight: bold;
+}
+iframe{
+    padding:10px;
+    margin-top: 2%;
+    width: 30%;
+    height: 50%;
+}
+.videos{
+    margin-top: 2%;
 }
 @media(max-width: 1080px){
 
@@ -97,6 +114,11 @@ p{
     .bandaActual{
         margin: 0 auto;
         width: 60%;
+    }
+    
+    iframe{
+        width: 100%;
+        height: 100%;
     }
     
     

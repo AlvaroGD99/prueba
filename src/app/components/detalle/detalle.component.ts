@@ -15,6 +15,10 @@ export class DetalleComponent implements OnInit {
   bandasTotales=[];
   contador:number;
   posicion:number;
+  id:any
+  safeCancion1:string;
+  safeCancion2:string;
+  safeCancion3:string
   constructor(private bandasService: BandasService,
     private activatedRoute: ActivatedRoute,
     private router: Router) { 
@@ -26,12 +30,11 @@ export class DetalleComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(async params => {
       // params SIEMPRE me devuelve los valores en formato STRING
-      const id = parseInt(params.bandaId);
-      this.banda = await this.bandasService.getById(id);
-    
-      
+      this.id = parseInt(params.bandaId);
+      this.banda = await this.bandasService.getById(this.id);
     });
   }
+ 
   eliminarBanda(){
     for(let bandaActual of this.bandasTotales){
       this.contador++;

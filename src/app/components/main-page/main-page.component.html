@@ -4,11 +4,17 @@
 </figure>
 <app-header></app-header>
 <div>
-    <button routerLink='/nuevaBanda'> Añadir Banda</button>
+    
     <div class="bandas">
         <div class="banda" *ngFor="let banda of bandasMostradas"
              [routerLink]="['/bandas', banda.id]">
             <img [src]="banda.imagen" alt="">
+        </div>
+        <div class="banda" routerLink='/nuevaBanda'>
+            <div class="bordeAdd">
+                <img src="http://www.clker.com/cliparts/L/q/T/i/P/S/add-button-white-hi.png" >
+            </div>
+           
         </div>
     </div>
 </div>

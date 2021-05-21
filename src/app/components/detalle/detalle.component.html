@@ -12,15 +12,48 @@
     
     <div class="cover">
         <div class="bandaActual">
-            <img [src]="banda.imagen" alt="">
-            <p><span> Fecha Creación: </span> {{banda.fechaCreacion}}</p>
-            <p> <span> Origen: </span>{{banda.pais}}</p>
-            <p><span> Integrantes: </span> {{banda.integrantes}} </p>
-            <p><span> Disco más vendido: </span>{{banda.discoMasVendido}} </p>
-            <p><span> Activos: </span>{{banda.activos}} </p>
+            <img [src]="banda?.imagen" alt="">
+            <div>
+                <h2>Fecha creación: </h2>
+                <p>{{banda?.fechaCreacion}}</p>
+            </div>
+            <div>
+                <h2>Origen: </h2>
+                <p>{{banda?.pais}}</p>
+            </div>
+            <div>
+                <h2>Integrantes: </h2>
+                <p>{{banda?.integrantes}}</p>
+            </div>
+            <div>
+                <h2>Disco más vendido: </h2>
+                <p>{{banda?.discoMasVendido}}</p>
+            </div>
+            <div>
+                <h2>Activos: </h2>
+                <p>{{banda?.activos}}</p>
+            </div>
+            
         </div>
         <div class="texto">
-            {{banda.informacion}}
+            <div>
+                <h1>Información sobre la banda</h1>
+            </div>
+            <div>
+                {{banda?.informacion}}
+            </div>
+            
+            <div class="videos">
+                <h1>
+                    Canciones más famosas
+                </h1>
+                <div>
+                    <p><a target="_blank" [href]="banda?.cancion1">{{banda?.cancion1}}</a></p>
+                    <p><a target="_blank" [href]="banda?.cancion2">{{banda?.cancion2}}</a></p>
+                    <p><a target="_blank" [href]="banda?.cancion3">{{banda?.cancion3}}</a></p>
+                    
+                </div>
+            </div>
         </div>
        
     </div>
