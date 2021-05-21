@@ -3,7 +3,7 @@ import { Banda } from '../services/bandas.service';
 export const BANDAS: Banda[] = [
     {
         id: 1,
-        nombre: 'The Rolling Stones',
+        nombre: 'the rolling stones',
         fechaCreacion: '1962',
         imagen: 'https://www.eliberico.com/wp-content/uploads/2017/06/rolling-stones-logo.jpg',
         pais: 'Reino Unido',
@@ -18,7 +18,7 @@ export const BANDAS: Banda[] = [
     },
     {
         id: 2,
-        nombre: 'Led Zeppelin',
+        nombre: 'led zeppelin',
         fechaCreacion: '1968',
         imagen: 'https://metalbizarre.com/wp-content/uploads/2018/10/led_zeppelin_x.jpg',
         pais: 'Reino Unido',
@@ -32,7 +32,7 @@ export const BANDAS: Banda[] = [
     },
     {
         id: 3,
-        nombre: 'Queen',
+        nombre: 'queen',
         fechaCreacion: '1970',
         imagen: 'https://i.pinimg.com/originals/54/36/53/543653e41338f113b93f0d49629320ef.jpg',
         pais: 'Reino Unido',
@@ -46,7 +46,7 @@ export const BANDAS: Banda[] = [
     },
     {
         id: 4,
-        nombre: 'Pink Floyd',
+        nombre: 'pink floyd',
         fechaCreacion: '1965',
         imagen: 'https://images-na.ssl-images-amazon.com/images/I/71bferojXML._AC_UL1500_.jpg',
         pais: 'Reino Unido',
@@ -60,7 +60,7 @@ export const BANDAS: Banda[] = [
     },
     {
         id: 5,
-        nombre: 'Deep Purple',
+        nombre: 'deep purple',
         fechaCreacion: '1968',
         imagen: 'https://i.pinimg.com/originals/c2/bb/97/c2bb973df8bc0ff144dd5d08a8db59a7.jpg',
         pais: 'Reino Unido',
@@ -74,7 +74,7 @@ export const BANDAS: Banda[] = [
     },
     {
         id: 6,
-        nombre: 'AC/DC',
+        nombre: 'ac/dc',
         fechaCreacion: '1973',
         imagen: 'https://rockandblog.net/wp-content/uploads/2020/10/disco-disponible-acdc-pwer-up.jpg',
         pais: 'Reino Unido/Autralia',
@@ -88,7 +88,7 @@ export const BANDAS: Banda[] = [
     },
     {
         id: 7,
-        nombre: 'The Ramones',
+        nombre: 'the ramones',
         fechaCreacion: '1974',
         imagen: 'https://i.pinimg.com/originals/72/63/8d/72638df86c9349e1cfcaeab061749a2d.png',
         pais: 'Estados Unidos',
@@ -102,7 +102,7 @@ export const BANDAS: Banda[] = [
     },
     {
         id: 8,
-        nombre: 'Kiss',
+        nombre: 'kiss',
         fechaCreacion: '1973',
         imagen: 'https://i.pinimg.com/originals/a4/dd/8b/a4dd8bbe86440e1d39cc1e47ec5b34f3.jpg',
         pais: 'Estados Unidos',

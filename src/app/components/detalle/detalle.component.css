@@ -27,7 +27,7 @@ h2{
 
 button{
     width: 100px;
-    background-color: rgba(133, 130, 130, 0.767);
+    background-color: rgba(133, 130, 130, 0.863);
     border: none;
     padding: 5px;
     font-size: 1em;
@@ -92,8 +92,22 @@ iframe{
 .videos{
     margin-top: 2%;
 }
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+a:hover{
+    
+    cursor: pointer;
+    color: rgb(83, 180, 204);
+}
 @media(max-width: 1080px){
 
+h1{
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
 .bandaActual{
     width: 40%;
     margin: 0 auto;

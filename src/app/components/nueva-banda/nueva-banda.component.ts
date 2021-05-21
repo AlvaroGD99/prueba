@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class NuevaBandaComponent implements OnInit {
   bandaForm: FormGroup;
   bandasTotales:{}[]=[]
-  xd:[]
+ 
   bandaAñadida:{}
   ultimaBanda:Object
   constructor(private router:Router) { 
@@ -18,14 +18,17 @@ export class NuevaBandaComponent implements OnInit {
    
     this.bandasTotales=JSON.parse(localStorage.getItem('bandas'))
     this.bandaForm= new FormGroup({
-      nombre: new FormControl(''),
-      pais: new FormControl(''),
-      integrantes: new FormControl(''),
-      discoMasVendido: new FormControl(''),
-      fechaCreacion: new FormControl(''),
-      activos: new FormControl(''),
-      imagen: new FormControl(''),
-      informacion: new FormControl(''),    
+      nombre: new FormControl('', Validators.required),
+      pais: new FormControl('', Validators.required),
+      integrantes: new FormControl('', Validators.required),
+      discoMasVendido: new FormControl('', Validators.required),
+      fechaCreacion: new FormControl('', Validators.required),
+      activos: new FormControl('', Validators.required),
+      cancion1: new FormControl('', Validators.required),
+      cancion2: new FormControl('', Validators.required),
+      cancion3: new FormControl('', Validators.required),
+      imagen: new FormControl('', Validators.required),
+      informacion: new FormControl('', Validators.required),    
   })
   }
 
@@ -39,14 +42,17 @@ export class NuevaBandaComponent implements OnInit {
    
   this.bandaAñadida= {
   id: this.ultimaBanda['id'] +1,
-  nombre: this.bandaForm.value.nombre,
+  nombre: this.bandaForm.value.nombre.toLowerCase(),
   fechaCreacion: this.bandaForm.value.fechaCreacion,
   imagen: this.bandaForm.value.imagen,
   pais: this.bandaForm.value.pais,
   informacion:this.bandaForm.value.informacion,
   integrantes:this.bandaForm.value.integrantes,
   activos:this.bandaForm.value.activos,
-  discoMasVendido:this.bandaForm.value.discoMasVendido
+  discoMasVendido:this.bandaForm.value.discoMasVendido,
+  cancion1:this.bandaForm.value.cancion1,
+  cancion2:this.bandaForm.value.cancion2,
+  cancion3:this.bandaForm.value.cancion3
 }
 this.bandasTotales.push(this.bandaAñadida)
 localStorage.setItem('bandas',JSON.stringify(this.bandasTotales))

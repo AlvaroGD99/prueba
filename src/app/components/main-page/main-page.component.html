@@ -3,10 +3,13 @@
 
 </figure>
 <app-header></app-header>
+
 <div>
-    
+    <form [formGroup]='filtrarBandas' >
+        <input type="text" name="" id="" class="form-control" formControlName="filtro" placeholder="Busca tu banda favorita" (keyup)='onChange()'>
+    </form>
     <div class="bandas">
-        <div class="banda" *ngFor="let banda of bandasMostradas"
+        <div class="banda" *ngFor="let banda of bandasFiltradas"
              [routerLink]="['/bandas', banda.id]">
             <img [src]="banda.imagen" alt="">
         </div>

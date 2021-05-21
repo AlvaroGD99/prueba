@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Banda, BandasService } from 'src/app/services/bandas.service';
 
 @Component({
@@ -7,11 +8,15 @@ import { Banda, BandasService } from 'src/app/services/bandas.service';
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent implements OnInit {
-
+  filtrarBandas:FormGroup;
   listaBandasStorage: Banda[];
-  bandasMostradas: []
+  bandasMostradas: any
+  bandasFiltradas:[]
 
   constructor(private bandasService: BandasService) {
+    this.filtrarBandas= new FormGroup({
+      filtro: new FormControl('')
+    })
     this.listaBandasStorage=[];
     this.bandasMostradas=JSON.parse(localStorage.getItem('bandas'))
     
@@ -19,23 +24,36 @@ export class MainPageComponent implements OnInit {
 
   async ngOnInit() {
     try{
-      console.log(this.bandasMostradas);
+     
       
       if(this.bandasMostradas==null){
-        console.log('hey');
+    
         this.listaBandasStorage= await this.bandasService.getAll()
         localStorage.setItem('bandas',JSON.stringify(this.listaBandasStorage))
       }
      
       this.bandasMostradas=JSON.parse( localStorage.getItem('bandas'))
-      console.log(this.bandasMostradas);
+     
+     this.bandasFiltradas= this.bandasMostradas.filter( el=>{
+      return el.nombre.includes(this.filtrarBandas.value.filtro)
+    
+    })
+      
       
     }catch(error){
       console.log(error);
     }
 
+
+   
   }
   
-  
+  onChange(){
+    this.bandasFiltradas= this.bandasMostradas.filter( el=>{
+      return el.nombre.includes(this.filtrarBandas.value.filtro.toLowerCase()) 
+    })
+   
+    
+  }
 
 }

@@ -3,43 +3,58 @@
 </figure>
 
 <app-header></app-header>
-
-<div  class="cover">
-    <h2>Añade tu banda favorita</h2>
-    <form [formGroup]='bandaForm'>
-        <div class="form-group">
-            <label>Nombre</label>
-            <input type="text" name="" id="" class="form-control" formControlName="nombre" placeholder="hola">
-        </div>
-        <div class="form-group">
-            <label>País</label>
-            <input type="text" name="" id="" class="form-control" formControlName="pais">
-        </div>
-        <div class="form-group">
-            <label>Integrantes</label>
-            <input type="text" name="" id="" class="form-control" formControlName="integrantes">
-        </div>
-        <div class="form-group">
-            <label>Disco más vendido</label>
-            <input type="text" name="" id="" class="form-control" formControlName="discoMasVendido">
-        </div>
-        <div class="form-group">
-            <label>Fecha de creación</label>
-            <input type="text" name="" id="" class="form-control" formControlName="fechaCreacion">
-        </div>
-        <div class="form-group">
-            <label>Activos</label>
-            <input type="text" name="" id="" class="form-control" formControlName="activos">
-        </div>
-        <div class="form-group">
-            <label>Imagen</label>
-            <input type="text" name="" id="" class="form-control" formControlName="imagen">
-        </div> <div class="form-group">
-            <label>Información</label>
-            <textarea formControlName='informacion'></textarea>
-        </div>
-       
-    </form>
-    
-    <button (click)='nuevaBanda()'>Hecho</button>
+<div>
+    <button class="botonVolver" routerLink='/bandas' >Volver</button>
+    <div  class="cover">
+        <h2>Añade tu banda favorita</h2>
+        <form [formGroup]='bandaForm'>
+            <div class="form-group">
+                <label>Nombre</label>
+                <input type="text" name="" id="" class="form-control" formControlName="nombre" placeholder="Nombre de la banda">
+            </div>
+            <div class="form-group">
+                <label>País</label>
+                <input type="text" name="" id="" class="form-control" formControlName="pais"  placeholder="Pais de donde proviene">
+            </div>
+            <div class="form-group">
+                <label>Integrantes</label>
+                <input type="text" name="" id="" class="form-control" formControlName="integrantes"  placeholder="Integrantes que forman la banda">
+            </div>
+            <div class="form-group">
+                <label>Disco más vendido</label>
+                <input type="text" name="" id="" class="form-control" formControlName="discoMasVendido"  placeholder="Disco más vendido de la banda">
+            </div>
+            <div class="form-group">
+                <label>Fecha de creación</label>
+                <input type="text" name="" id="" class="form-control" formControlName="fechaCreacion"  placeholder="Año en el que se crearon">
+            </div>
+            <div class="form-group">
+                <label>Activos</label>
+                <input type="text" name="" id="" class="form-control" formControlName="activos"  placeholder="¿Siguen activos? (Sí/No)">
+            </div>
+            <div class="form-group">
+                <label>Cancion 1</label>
+                <input type="text" name="" id="" class="form-control" formControlName="cancion1"  placeholder="URL de Youtube de una de sus canciones ">
+            </div>
+            <div class="form-group">
+                <label>Cancion 2</label>
+                <input type="text" name="" id="" class="form-control" formControlName="cancion2"  placeholder="URL de Youtube de otra de sus canciones ">
+            </div>
+            <div class="form-group">
+                <label>Cancion 3</label>
+                <input type="text" name="" id="" class="form-control" formControlName="cancion3"  placeholder="URL de Youtube otra una de sus canciones ">
+            </div>
+            <div class="form-group">
+                <label>Imagen</label>
+                <input type="text" name="" id="" class="form-control" formControlName="imagen" placeholder="URL de la imagen que quieras poner de la banda">
+            </div> <div class="form-group">
+                <label>Información</label>
+                <textarea formControlName='informacion'  placeholder="Información que quieras poner de la banda"></textarea>
+            </div>
+           
+        </form>
+        
+        <button class="botonHecho" [disabled]="!bandaForm.valid"(click)='nuevaBanda()'>Hecho</button>
+    </div>
 </div>
+
