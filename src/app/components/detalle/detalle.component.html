@@ -6,9 +6,9 @@
     </figure>
     <app-header></app-header>
     <div class="buttons">
-        <button routerLink='/bandas' >Volver</button>
-        <button [routerLink]="['editar']" >Editar</button>
-        <button (click)='eliminarBanda()' class="delete">Eliminar</button>
+        <button routerLink='/bandas' ><p>VOLVER</p> </button>
+        <button [routerLink]="['editar']" ><p>EDITAR</p> </button>
+        <button (click)='eliminarBanda()' class="delete"><p>ELIMINAR</p></button>
     </div>
     
     <div class="cover">
@@ -38,15 +38,16 @@
         </div>
         <div class="texto">
             <div>
-                <h1>Información sobre la banda</h1>
+                <h1>INFORMACION SOBRE LA BANDA</h1>
             </div>
             <div>
-                {{banda?.informacion}}
+                <p>{{banda?.informacion}}</p>
+               
             </div>
             
             <div class="videos">
                 <h1>
-                    Canciones más famosas
+                    CANCIONES MÁS ESCUCHADAS
                 </h1>
                 <div>
                     <p><a target="_blank" [href]="banda?.cancion1">{{banda?.cancion1}}</a></p>

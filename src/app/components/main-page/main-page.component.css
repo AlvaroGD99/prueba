@@ -39,7 +39,7 @@ button{
     cursor: pointer;
 }
 
-.banda img {
+.bandaImage {
     width: 100%;
     height: 200px;
     
@@ -50,11 +50,7 @@ button{
     color: black;
 }
 
-.banda p {
-    text-align: right;
-    color: black;
-    margin-top: 5px;
-}
+
 
 form{
     width: 100%;
@@ -65,5 +61,24 @@ form{
 input{
     width: 50%;
     height: 40px;
+    font-family: 'Poppins', sans-serif;
     
+}
+P{
+    color: white;
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+    padding: 5px;
+  
+}
+.borderAdd{
+    height: 80%;
+    padding: 200px;
+}
+
+.new{
+    height: 180px;
+    width: 90%;
+    margin-left: 5%;
+   
 }

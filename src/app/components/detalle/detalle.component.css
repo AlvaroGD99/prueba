@@ -6,6 +6,8 @@ figure{
 h2{
     color: black;
     width: 100%;
+    font-family: 'PT Sans', sans-serif;
+    margin-top: 5%;
 }
 .cover-image{
     width: 100%;
@@ -13,6 +15,7 @@ h2{
     background-image: url("https://fondosmil.com/fondo/20754.jpg");
     background-size: cover;
     position: fixed;
+    
 }
 
 .cover{
@@ -43,10 +46,8 @@ button{
     margin: auto;
     margin-top: 0;
     margin-right: 3%;
-   
     text-transform: uppercase;
     color: white;
-    cursor: pointer;
     text-align: center;
     
 }
@@ -67,21 +68,25 @@ p{
     margin-left: 0;
     margin-top: 0;
     margin-right: 0;
+   
 }
 .delete{
-    background-color: rgba(190, 75, 75, 0.767);
+    background-color: rgba(190, 75, 75, 0.863);
 }
 .buttons{
     display: flex;
     margin: 2% 10%;
     justify-content: space-between;
+    font-family: 'PT Sans', sans-serif;
 }
 
 h1{
-    font-size: 2em;
-    margin-bottom: 2%;
-    color: black;
+    font-size: 1.5em;
     font-weight: bold;
+    margin-bottom: 1%;
+    color: black;
+    line-height: 1em;
+    font-family: 'PT Sans', sans-serif;
 }
 iframe{
     padding:10px;
@@ -90,7 +95,7 @@ iframe{
     height: 50%;
 }
 .videos{
-    margin-top: 2%;
+    margin-top: 5%;
 }
 a{
     text-decoration: none;
@@ -102,6 +107,10 @@ a:hover{
     cursor: pointer;
     color: rgb(83, 180, 204);
 }
+p{
+    font-family: 'Poppins', sans-serif;
+}
+
 @media(max-width: 1080px){
 
 h1{

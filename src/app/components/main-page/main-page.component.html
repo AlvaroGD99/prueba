@@ -8,17 +8,20 @@
     <form [formGroup]='filtrarBandas' >
         <input type="text" name="" id="" class="form-control" formControlName="filtro" placeholder="Busca tu banda favorita" (keyup)='onChange()'>
     </form>
-    <div class="bandas">
-        <div class="banda" *ngFor="let banda of bandasFiltradas"
-             [routerLink]="['/bandas', banda.id]">
-            <img [src]="banda.imagen" alt="">
-        </div>
-        <div class="banda" routerLink='/nuevaBanda'>
-            <div class="bordeAdd">
-                <img src="http://www.clker.com/cliparts/L/q/T/i/P/S/add-button-white-hi.png" >
+    <div class="container">
+        <div class="bandas">
+            <div class="banda" *ngFor="let banda of bandasFiltradas"
+                 [routerLink]="['/bandas', banda.id]">
+                <img class="bandaImage" [src]="banda.imagen" alt="">
             </div>
-           
+            <div class="banda" routerLink='/nuevaBanda'>
+                <div class="bordeAdd">
+                    <img class="new" src="http://www.clker.com/cliparts/L/q/T/i/P/S/add-button-white-hi.png" >
+                </div>
+               <p>AÑADIR BANDA</p>
+            </div>
         </div>
     </div>
+   
 </div>
 

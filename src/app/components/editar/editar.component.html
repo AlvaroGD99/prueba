@@ -4,57 +4,57 @@
 
 <app-header></app-header>
 <div>
-    <button class="botonVolver" routerLink='/bandas' >Volver</button>
+    <button class="botonVolver" routerLink='/bandas' ><p>VOLVER</p> </button>
     <div  class="cover">
-        <h2>Añade tu banda favorita</h2>
+        <h2>EDITANDO A {{banda?.nombre.toUpperCase()}}</h2>
         <form [formGroup]='bandaForm'>
             <div class="form-group">
-                <label>Nombre</label>
+                <label>NOMBRE</label>
                 <input type="text" name="" id="" class="form-control" formControlName="nombre" placeholder="Nombre de la banda">
             </div>
             <div class="form-group">
-                <label>País</label>
+                <label>PAÍS</label>
                 <input type="text" name="" id="" class="form-control" formControlName="pais"  placeholder="Pais de donde proviene">
             </div>
             <div class="form-group">
-                <label>Integrantes</label>
+                <label>INTEGRANTES</label>
                 <input type="text" name="" id="" class="form-control" formControlName="integrantes"  placeholder="Integrantes que forman la banda">
             </div>
             <div class="form-group">
-                <label>Disco más vendido</label>
+                <label>DISCO MÁS VENDIDO</label>
                 <input type="text" name="" id="" class="form-control" formControlName="discoMasVendido"  placeholder="Disco más vendido de la banda">
             </div>
             <div class="form-group">
-                <label>Fecha de creación</label>
+                <label>FECHA DE CREACIÓN</label>
                 <input type="text" name="" id="" class="form-control" formControlName="fechaCreacion"  placeholder="Año en el que se crearon">
             </div>
             <div class="form-group">
-                <label>Activos</label>
+                <label>ACTIVOS</label>
                 <input type="text" name="" id="" class="form-control" formControlName="activos"  placeholder="¿Siguen activos? (Sí/No)">
             </div>
             <div class="form-group">
-                <label>Cancion 1</label>
+                <label>CANCION 1</label>
                 <input type="text" name="" id="" class="form-control" formControlName="cancion1"  placeholder="URL de Youtube de una de sus canciones ">
             </div>
             <div class="form-group">
-                <label>Cancion 2</label>
+                <label>CANCION 2</label>
                 <input type="text" name="" id="" class="form-control" formControlName="cancion2"  placeholder="URL de Youtube de otra de sus canciones ">
             </div>
             <div class="form-group">
-                <label>Cancion 3</label>
+                <label>CANCION 3</label>
                 <input type="text" name="" id="" class="form-control" formControlName="cancion3"  placeholder="URL de Youtube otra una de sus canciones ">
             </div>
             <div class="form-group">
-                <label>Imagen</label>
+                <label>IMAGEN</label>
                 <input type="text" name="" id="" class="form-control" formControlName="imagen" placeholder="URL de la imagen que quieras poner de la banda">
             </div> <div class="form-group">
-                <label>Información</label>
+                <label>INFORMACIÓN</label>
                 <textarea formControlName='informacion'  placeholder="Información que quieras poner de la banda"></textarea>
             </div>
            
         </form>
         
-        <button class="botonHecho" [disabled]="!bandaForm.valid"(click)='editarBanda()'>Hecho</button>
+        <button class="botonHecho" [disabled]="!bandaForm.valid"(click)='editarBanda()'><P>HECHO</P></button>
     </div>
 </div>
 
