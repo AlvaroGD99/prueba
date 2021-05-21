@@ -1,0 +1,45 @@
+<figure class="cover-image">
+
+</figure>
+
+<app-header></app-header>
+
+<div  class="cover">
+    <h2>Añade tu banda favorita</h2>
+    <form [formGroup]='bandaForm'>
+        <div class="form-group">
+            <label>Nombre</label>
+            <input type="text" name="" id="" class="form-control" formControlName="nombre" placeholder="hola">
+        </div>
+        <div class="form-group">
+            <label>País</label>
+            <input type="text" name="" id="" class="form-control" formControlName="pais">
+        </div>
+        <div class="form-group">
+            <label>Integrantes</label>
+            <input type="text" name="" id="" class="form-control" formControlName="integrantes">
+        </div>
+        <div class="form-group">
+            <label>Disco más vendido</label>
+            <input type="text" name="" id="" class="form-control" formControlName="discoMasVendido">
+        </div>
+        <div class="form-group">
+            <label>Fecha de creación</label>
+            <input type="text" name="" id="" class="form-control" formControlName="fechaCreacion">
+        </div>
+        <div class="form-group">
+            <label>Activos</label>
+            <input type="text" name="" id="" class="form-control" formControlName="activos">
+        </div>
+        <div class="form-group">
+            <label>Imagen</label>
+            <input type="text" name="" id="" class="form-control" formControlName="imagen">
+        </div> <div class="form-group">
+            <label>Información</label>
+            <textarea formControlName='informacion'></textarea>
+        </div>
+       
+    </form>
+    
+    <button (click)='nuevaBanda()'>Hecho</button>
+</div>

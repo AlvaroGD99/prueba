@@ -1,0 +1,111 @@
+
+figure{
+    position: absolute;
+    z-index: -1;
+}
+span{
+    color: black;
+}
+.cover-image{
+    width: 100%;
+    height: 100%;
+    background-image: url("https://fondosmil.com/fondo/20754.jpg");
+    background-size: cover;
+    position: fixed;
+}
+
+.cover{
+    border-radius: 10px;
+    margin: 0 10%;
+    background-color: rgba(126, 124, 124, 0.849);
+    padding: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+button{
+    width: 100px;
+    
+    background-color: rgba(133, 130, 130, 0.767);
+    border: none;
+    padding: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+.bandaActual {
+    
+    color: black;
+    width: 15%;
+    border: 3px solid rgb(0, 0, 0);
+    padding: 5px;
+    margin: auto;
+    margin-top: 0;
+    margin-right: 3%;
+   
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    
+}
+
+.bandaActual img {
+    width: 100%;
+    height: 200px;
+    
+}
+p{
+   padding: 10px;
+}
+.texto{
+    width: 80%;
+    color: white;
+    line-height: 1.5rem;
+    margin: auto ;
+    margin-left: 0;
+    margin-top: 0;
+    margin-right: 0;
+}
+.delete{
+    background-color: rgba(190, 75, 75, 0.767);
+}
+.buttons{
+    display: flex;
+    margin: 2% 10%;
+    justify-content: space-between;
+}
+@media(max-width: 1080px){
+
+.bandaActual{
+    width: 40%;
+    margin: 0 auto;
+}
+
+.bandaActual img {
+    width: 100%;
+    height: 300px;
+    
+}
+.texto{
+    text-align: center;
+    margin: 5% auto;
+}
+}
+@media(max-width: 768px){
+
+    .bandaActual{
+        margin: 0 auto;
+        width: 60%;
+    }
+    
+    
+}
+@media(max-width: 568px){
+
+    .bandaActual{
+        width: 90%;
+    }
+    
+}
+

@@ -1,0 +1,10 @@
+header{
+    padding: 20px;
+    background-color: rgb(41, 40, 40);
+    color: white;
+    text-align: center;
+    max-height: 10vh;
+}
+h2{
+    font-size: 2em;
+}

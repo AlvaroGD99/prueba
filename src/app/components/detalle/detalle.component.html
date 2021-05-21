@@ -1,0 +1,27 @@
+
+<body>
+    
+    <figure class="cover-image">
+
+    </figure>
+    <app-header></app-header>
+    <div class="buttons">
+        <button routerLink='/bandas' >Volver</button>
+        <button (click)='eliminarBanda()' class="delete">Eliminar</button>
+    </div>
+    
+    <div class="cover">
+        <div class="bandaActual">
+            <img [src]="banda.imagen" alt="">
+            <p><span> Fecha Creación: </span> {{banda.fechaCreacion}}</p>
+            <p> <span> Origen: </span>{{banda.pais}}</p>
+            <p><span> Integrantes: </span> {{banda.integrantes}} </p>
+            <p><span> Disco más vendido: </span>{{banda.discoMasVendido}} </p>
+            <p><span> Activos: </span>{{banda.activos}} </p>
+        </div>
+        <div class="texto">
+            {{banda.informacion}}
+        </div>
+       
+    </div>
+</body>
