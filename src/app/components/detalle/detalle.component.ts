@@ -32,6 +32,8 @@ export class DetalleComponent implements OnInit {
       // params SIEMPRE me devuelve los valores en formato STRING
       this.id = parseInt(params.bandaId);
       this.banda = await this.bandasService.getById(this.id);
+      
+      
     });
   }
  
