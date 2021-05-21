@@ -38,6 +38,7 @@ export class EditarComponent implements OnInit {
     }
   
     ngOnInit(): void {
+      this.contador=0;
       console.log(this.bandasTotales);
       this.ultimaBanda=this.bandasTotales[this.bandasTotales.length-1];
       this.activatedRoute.params.subscribe(async params => {
@@ -85,10 +86,13 @@ export class EditarComponent implements OnInit {
       this.posicion=this.contador  
     }
   }
-  this.contador=0
-  this.bandasTotales.splice((this.posicion-1),1)
-  console.log(this.bandasTotales);
+  console.log(this.posicion);
   
+  this.contador=0
+  this.bandasTotales.splice((this.posicion-1),1,this.bandaEditada)
+  console.log(this.bandasTotales);
+  localStorage.setItem('bandas',JSON.stringify(this.bandasTotales))
+  this.router.navigate([`bandas/${this.banda.id}`])
   
   }
   
